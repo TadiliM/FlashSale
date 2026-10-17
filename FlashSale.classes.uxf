@@ -1,0 +1,47 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>24</y><w>272</w><h>200</h></coordinates><panel_attributes>Event
+--
++Id: int
++Name: string
++Description: string
++StartsAt: DateTimeOffset
++TimeZoneId: string
++Location: string
++Price: decimal
++Currency: string
++CreatedByUserId: Guid</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>384</x><y>32</y><w>224</w><h>120</h></coordinates><panel_attributes>Seat
+--
++Id: int
++EventId: int
++Label: string
++Status: SeatStatus {calculé}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>696</x><y>32</y><w>184</w><h>96</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+SeatStatus
+--
+Available
+Held
+Sold</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>280</y><w>248</w><h>88</h></coordinates><panel_attributes>ApplicationUser
+--
++Id: Guid {hérité d'IdentityUser}
++Email: string? {hérité}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>352</x><y>264</y><w>240</w><h>112</h></coordinates><panel_attributes>SeatHold
+--
++Id: Guid
++SeatId: int
++UserId: Guid
++ExpiresAt: DateTimeOffset</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>264</y><w>240</w><h>112</h></coordinates><panel_attributes>Reservation
+--
++Id: Guid
++SeatId: int
++UserId: Guid
++ConfirmedAt: DateTimeOffset</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>216</y><w>40</w><h>80</h></coordinates><panel_attributes>lt=-
+m1=0..*
+m2=1</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>264</x><y>80</y><w>136</w><h>32</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*</panel_attributes><additional_attributes>10;10;150;10</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>80</y><w>112</w><h>24</h></coordinates><panel_attributes>lt=..&gt;</panel_attributes><additional_attributes>10;10;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>464</x><y>144</y><w>40</w><h>136</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..1</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>Relation</id><coordinates><x>544</x><y>144</y><w>232</w><h>136</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..1
+m2pos=-15,-20</panel_attributes><additional_attributes>10;10;10;80;270;80;270;150</additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>312</y><w>128</w><h>32</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*</panel_attributes><additional_attributes>10;10;140;10</additional_attributes></element><element><id>Relation</id><coordinates><x>112</x><y>360</y><w>680</w><h>96</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*</panel_attributes><additional_attributes>10;10;10;100;810;100;810;20</additional_attributes></element></diagram>
